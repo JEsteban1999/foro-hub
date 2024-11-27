@@ -1,8 +1,7 @@
-CREATE TABLE Usuario (
+CREATE TABLE Topico (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL,
-    correoElectronico VARCHAR(255) NOT NULL UNIQUE,
-    contrasena VARCHAR(255) NOT NULL,
-    perfil_id INT NOT NULL,
-    FOREIGN KEY (perfil_id) REFERENCES Perfil(id)
+    titulo VARCHAR(255) NOT NULL,
+    mensaje TEXT NOT NULL,
+    fechaCreacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    status VARCHAR(50) NOT NULL,
 );
