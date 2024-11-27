@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
+@Table(name = "topics")
 public class Topic {
 
     @Id
@@ -19,7 +20,7 @@ public class Topic {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String mensaje;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "fecha_creacion")
     private LocalDateTime fechaCreacion;
 
     @Column(nullable = false)

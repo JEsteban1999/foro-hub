@@ -11,7 +11,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
-@RestController("/topics")
+@RestController
+@RequestMapping("/topics")
 @RequiredArgsConstructor
 public class TopicController {
 
@@ -19,6 +20,7 @@ public class TopicController {
 
     @GetMapping
     public ResponseEntity<List<Topic>> getAllTopics() {
+        System.out.println("Desde el controller con get");
         return ResponseEntity.ok(topicService.getAllTopics());
     }
 
